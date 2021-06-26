@@ -2848,3 +2848,32 @@ section.lazy-placeholder:after {
 .section-btn-bottom {
   padding-bottom: 30px;
 }
+
+.chat-youtube {
+  min-height: 370px;
+  width: 70%;
+}
+
+.video-youtube {
+  width: 720px;
+  min-height: 420px;
+}
+
+@media (max-width: 1365px) {
+  .video-youtube {
+    width: 520px;
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 520px) {
+  .video-youtube {
+    width: 360px;
+    min-height: 160px;
+  }
+
+  .chat-youtube {
+    min-height: 510px;
+    width: 360px;
+  }
+}
