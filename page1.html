@@ -74,11 +74,11 @@
     <div class="back"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-6 m-auto">
+            <div class="col-lg-6 m-auto actual-youtube">
                 <iframe width="90%" height="auto" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" loading="lazy" class="lazyload video-youtube" data-src="https://www.youtube.com/embed/lEWUxrYAkn0"></iframe>
             </div>
             <div class="col-lg-6 m-auto">
-                <div class="content-wrapper align-left">
+                <div class="content-wrapper align-left actual-youtube-chat">
                     <iframe allowfullscreen="" frameborder="0" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" width="480" loading="lazy" class="lazyload chat-youtube" data-src="https://www.youtube.com/live_chat?v=lEWUxrYAkn0&amp;embed_domain=localhost"></iframe>
                 </div>
             </div>
@@ -95,7 +95,7 @@
             <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-1"><strong>Trilhas</strong></h4>
         </div>
         <div class="row justify-content-center mt-4">
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-4 card-android">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" class="lazyload" data-src="assets/images/features1.jpg">
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-4 card-flutter">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" class="lazyload" data-src="assets/images/features2.jpg">
@@ -125,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-4">
+            <div class="item features-image сol-12 col-md-6 col-lg-4 card-ia">
                 <div class="item-wrapper">
                     <div class="item-img">
                         <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" loading="lazy" class="lazyload" data-src="assets/images/features3.jpg">
@@ -208,7 +208,7 @@
 </section>
 
 
-<script src="assets/web/assets/jquery/jquery.min.js"></script>
+  <script src="assets/web/assets/jquery/jquery.min.js"></script>
   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
@@ -218,8 +218,51 @@
   <script src="assets/dropdown/js/navbar-dropdown.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
-
-
+  <script>
+      $(document).ready(function() {
+          $('.card-android').click(function() {
+              $(".actual-youtube iframe").remove();
+              $('<iframe width="90%" height="360" src="https://www.youtube.com/embed/lEWUxrYAkn0"\n' +
+                  '              title="YouTube video player" frameBorder="0"\n' +
+                  '              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+                  '              allowFullScreen="" loading="lazy" className="lazyload video-youtube"\n' +
+                  '              ></iframe>')
+                  .appendTo(".actual-youtube");
+              $(".actual-youtube-chat iframe").remove();
+              $('<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/live_chat?v=lEWUxrYAkn0&amp;embed_domain=ioextendedbrasil.devfest.com.br" width="480" loading="lazy" class="lazyload chat-youtube"></iframe>').appendTo(".actual-youtube-chat");
+          });
+      });
+  </script>
+  <script>
+      $(document).ready(function() {
+          $('.card-flutter').click(function() {
+              $(".actual-youtube iframe").remove();
+              $('<iframe width="90%" height="360" src="https://www.youtube.com/embed/ajSC5N5ajLc"\n' +
+                  '              title="YouTube video player" frameBorder="0"\n' +
+                  '              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+                  '              allowFullScreen="" loading="lazy" className="lazyload video-youtube"\n' +
+                  '              ></iframe>')
+                  .appendTo(".actual-youtube");
+              $(".actual-youtube-chat iframe").remove();
+              $('<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/live_chat?v=ajSC5N5ajLc&amp;embed_domain=ioextendedbrasil.devfest.com.br" width="480" loading="lazy" class="lazyload chat-youtube"></iframe>').appendTo(".actual-youtube-chat");
+          });
+      });
+  </script>
+  <script>
+      $(document).ready(function() {
+          $('.card-ia').click(function() {
+              $(".actual-youtube iframe").remove();
+              $('<iframe width="90%" height="360" src="https://www.youtube.com/embed/vtzX1pQ4vG4"\n' +
+                  '              title="YouTube video player" frameBorder="0"\n' +
+                  '              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"\n' +
+                  '              allowFullScreen="" loading="lazy" className="lazyload video-youtube"\n' +
+                  '              ></iframe>')
+                  .appendTo(".actual-youtube");
+              $(".actual-youtube-chat iframe").remove();
+              $('<iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/live_chat?v=vtzX1pQ4vG4&amp;embed_domain=ioextendedbrasil.devfest.com.br" width="480" loading="lazy" class="lazyload chat-youtube"></iframe>').appendTo(".actual-youtube-chat");
+          });
+      });
+  </script>
 
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
     <input name="animation" type="hidden">
